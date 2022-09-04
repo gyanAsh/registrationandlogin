@@ -1,0 +1,9 @@
+.override{
+  height:auto !important;
+  max-height: none !important;
+  padding: 24px !important;
+}
+
+.logoOverride{
+  padding: 50px !important;
+}

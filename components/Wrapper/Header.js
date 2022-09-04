@@ -4,7 +4,7 @@ import myLogo  from '../../public/headerLogo.svg'
 
 const Header = () => {
   return (
-      <div className="h-24 bg-slate-900 text-white flex items-center justify-between px-8">
+      <div className="h-24 bg-slate-900 text-white flex items-center justify-between px-12">
           <Image src={myLogo} alt="Overlay Icon" />
           <Button/>
     </div>
