@@ -54,7 +54,7 @@ const Form = () => {
             <button className="absolute bottom-4 right-4" onClick={(e) => { e.preventDefault(); setViewPassword(!viewPassword) }}><i className={`fa-regular fa-${viewPassword?'eye':'eye-slash'}`}></i></button>
         </div>
           <div className="flex justify-between mt-6">
-              <button for="remember" className="text-base font-semibold text-slate-800" onClick={(e) => { e.preventDefault(); setRemember(!remember) }}>
+              <button htmlFor="remember" className="text-base font-semibold text-slate-800" onClick={(e) => { e.preventDefault(); setRemember(!remember) }}>
                 <i className={`${remember ? 'fa-solid fa-circle-check text-blue-600' : 'fa-regular fa-circle text-zinc-400'} mr-3`}></i>
                 Remember me
               </button>
