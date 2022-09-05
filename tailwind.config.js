@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      'rope':['Manrope', 'sans-serif']
+    }
   },
   plugins: [],
 }
