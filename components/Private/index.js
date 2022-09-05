@@ -1,11 +1,20 @@
-import React, { useState } from 'react'
+import React, { createContext, useState } from 'react'
 import Auth from '../Auth'
+export const AuthContext = createContext()
 const index = ({ children }) => {
     const [isAuth, setAuth] = useState(true);
         if (isAuth) {
-        return <Auth/> 
+        return (
+            <AuthContext.Provider value={{isAuth,setAuth}}>
+                  <Auth/>  
+            </AuthContext.Provider>
+        ) 
         }
-        return children
+    return (
+        <AuthContext.Provider value={{isAuth,setAuth}}>
+        {children}  
+        </AuthContext.Provider>
+        ) 
 }
 
 export default index

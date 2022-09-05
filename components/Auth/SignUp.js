@@ -1,9 +1,11 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import Image from 'next/image'
 import style from '../../styles/Image.module.css'
 import illustration from '../../public/SignIn/illustrationSignUp.svg'
 import googleIcon from '../../public/google.svg'
 import Footer from '../Wrapper/Footer'
+import {AuthStatus} from './index'
+import { AuthContext } from '../Private'
 const SignUp = () => {
   return (
     <div className="bg-white flex justify-between w-screen h-screen font-rope">
@@ -27,6 +29,8 @@ const Register = () => {
 
 const Form = () => {
   const [viewPassword, setViewPassword] = useState(false)
+  const {setLogin} = useContext(AuthStatus)
+  const {setAuth} = useContext(AuthContext)
   return (
     <div className="flex flex-col justify-center items-center h-5/6">
       <div className="w-96">
@@ -34,13 +38,13 @@ const Form = () => {
           <h3 className="text-gray-900 text-center text-3xl font-bold">Sign Up for an account</h3>
           <h5 className="text-center text-base font-normal text-slate-500">Send, spend and save smater</h5>
         </div>
-        <button className="border border-zinc-300 rounded-xl h-14 w-full flex justify-center items-center"><Image objectFit="contain" width={24} src={googleIcon} alt="Google Icon"/>Sign in with Google</button>
+        <button onClick={e => { e.preventDefault();setAuth(false)}} className="border border-zinc-300 rounded-xl h-14 w-full flex justify-center items-center gap-2"><Image objectFit="contain" width={24} src={googleIcon} alt="Google Icon"/>Sign in with Google</button>
         <div className="flex flex-row items-center flex-rope mt-4 mb-4">
           <span className="border-t border-zinc-300 w-full"></span>
           <p className="w-full text-center text-base font-normal text-slate-500">Or With Email</p>
           <span className="border-t border-zinc-300 w-full"></span>
         </div>
-      <form className="flex flex-col">
+      <form onSubmit={e=>{e.preventDefault();setAuth(false)}} className="flex flex-col">
         <div className="flex flex-col relative gap-4">
             <div className="flex gap-4">
                 <input className="border border-zinc-300 rounded-xl h-14 w-full p-4 text-base font-rope font-medium tracking-wider" type="text" placeholder='First name'/>
@@ -53,7 +57,7 @@ const Form = () => {
         <p className="text-base font-medium mt-6"> By creating an account, you agreeing to our <span className="text-base font-semibold">Privacy Policy</span>, and <span className="text-base font-semibold">Electronics Communication Policy.</span></p>
         <input type="submit" className="h-14 w-full border border-zinc-300 rounded-xl bg-blue-600 text-white text-base font-bold mt-8 mb-8" value="Sign Up"/>
       </form>
-        <p className="flex flex-row justify-center text-base font-medium">Already have an account? <button className="font-bold ml-2">Sign In</button></p>
+        <p className="flex flex-row justify-center text-base font-medium">Already have an account? <button className="font-bold ml-2" onClick={(e) => { e.preventDefault(); setLogin(true)}}>Sign In</button></p>
       </div>
     </div>
     
