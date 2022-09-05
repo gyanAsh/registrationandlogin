@@ -9,7 +9,7 @@ export default function Home() {
             {/* heading text */}
             <div className="flex flex-col items-center gap-4">
                 <h2 className="text-gray-900 text-center text-3xl font-bold">Hi, Johne Doe!</h2>
-                <div  className="text-center text-base font-normal text-slate-500">You’re logged in. Well done!</div>
+                <div  className="text-center text-base font-normal text-slate-500">You&apos;re logged in. Well done!</div>
             </div>
                 <button onClick={e => { e.preventDefault();setAuth(true) }} className="h-14 w-full border border-zinc-300 rounded-xl bg-blue-600 text-white text-base font-bold mt-5">
                     Log out
