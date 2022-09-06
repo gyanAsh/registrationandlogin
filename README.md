@@ -1,15 +1,26 @@
-# revirt.space_task_tracker
-Note Tracker Application (https://revirt-space-todo-assignmet.netlify.app/)
+# registerandlogin Component
+ 
+Live Demo: (https://registrationandlogin.vercel.app/)
+ 
 // This link in not connected to an actual database //
 
-** *The above source code does include login feature as it inclueds backend code. built with NodeJs(ExpressJs) and MongoDB as the Database* **
+ 
+** *The above source code does not include actual login feature as it does not include backend code.* **
 
-**Product Features:**
+**Component Features:**
+- User SignIn
+<img src="https://raw.githubusercontent.com/gyanAsh/registrationandlogin/main/public/Display/signIn.JPG"/>
 
-- ToDos listing page with their completion status
-- Users can mark any task as completed or incomplete
-- Users can delete any task from the list
-- Users can add tasks to the list
-- *The filter feature allows user to filter tasks based on their status*
-<img src="https://raw.githubusercontent.com/gyanAsh/revirt.space_task_tracker/master/todo-frontend/public/tasktrakerlogin.JPG" alt="Application Preview"/>
-<img src="https://raw.githubusercontent.com/gyanAsh/revirt.space_assignment_frontend/master/todo-frontend/public/image.png" alt="Application Preview"/>
+- User SignUp
+<img src="https://raw.githubusercontent.com/gyanAsh/registrationandlogin/main/public/Display/signUp.JPG"/>
+
+- Forgot Password Component
+<img src="https://raw.githubusercontent.com/gyanAsh/registrationandlogin/main/public/Display/forgetPassword.JPG"/>
+
+- OTP Component
+<img src="https://raw.githubusercontent.com/gyanAsh/registrationandlogin/main/public/Display/otp.JPG"/>
+
+- Main Component
+<img src="https://raw.githubusercontent.com/gyanAsh/registrationandlogin/main/public/Display/loggedIn.JPG"/>
+ 
+*Click on buttons to Navigate between components*
