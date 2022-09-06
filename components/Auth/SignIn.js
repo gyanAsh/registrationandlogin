@@ -62,7 +62,7 @@ const Form = () => {
         </div>
         <input type="submit" className="h-14 w-full border border-zinc-300 rounded-xl bg-blue-600 text-white text-base font-bold mt-8 mb-8" value="Sign In"/>
       </form>
-        <p className="flex flex-row justify-center text-base font-medium">Don't have an account? <button className="font-bold ml-2" onClick={(e) => { e.preventDefault(); setLogin(false)}}>Sign Up</button></p>
+        <p className="flex flex-row justify-center text-base font-medium">Don&apos;t have an account? <button className="font-bold ml-2" onClick={(e) => { e.preventDefault(); setLogin(false)}}>Sign Up</button></p>
       </div>
     </div>
     

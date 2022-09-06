@@ -3,7 +3,7 @@ import ForgetPassword from './ForgetPassword';
 import SignIn from './SignIn'
 import SignUp from './SignUp'
 export const AuthStatus = createContext();
-const index = () => {
+const Index = () => {
   const [login, setLogin] = useState(true);
   const [forgotPassword, setForgotPassword] = useState(false)
   if (login && !forgotPassword){
@@ -28,4 +28,4 @@ const index = () => {
     
 }
 
-export default index
+export default Index

@@ -1,7 +1,7 @@
 import React, { createContext, useState } from 'react'
 import Auth from '../Auth'
 export const AuthContext = createContext()
-const index = ({ children }) => {
+const Index = ({ children }) => {
     const [isAuth, setAuth] = useState(true);
         if (isAuth) {
         return (
@@ -17,4 +17,4 @@ const index = ({ children }) => {
         ) 
 }
 
-export default index
+export default Index
